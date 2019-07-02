@@ -4,8 +4,10 @@ from rest_framework.routers import DefaultRouter
 from recipe import views
 
 
+# Register viewset with a url router so that endpoint can be accessed from the web
 router = DefaultRouter()
 router.register('tags', views.TagViewSet)
+router.register('ingredients', views.IngredientViewSet)
 
 app_name = 'recipe'
 
